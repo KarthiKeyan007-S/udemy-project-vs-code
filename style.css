@@ -53,24 +53,27 @@ body {
     gap: 10px;
     align-items: center;
 }
+
 /* My learing popup*/
-.myleraing{
+.myleraing {
     position: relative;
     cursor: pointer;
 }
-.mylearing__popup{
+
+.mylearing__popup {
     position: absolute;
     background-color: white;
-    border:solid black 1px ;
+    border: solid black 1px;
     width: 100px;
     top: 100%;
     padding: 20px;
     display: none;
     border-radius: 30px;
-    }
-    .myleraing:hover .mylearing__popup{
-      display: block;  
-    }
+}
+
+.myleraing:hover .mylearing__popup {
+    display: block;
+}
 
 .categories {
     display: flex;
@@ -84,25 +87,45 @@ body {
     color: white;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+}
+.categories p:hover{
+   transition: 1s; 
+   background-color: transparent;
+   color: purple;
 }
 
 .sale__img {
     position: relative;
-    
-    }
-    .sale-img__offer{
-        width: 35%;
-        border: solid black 2px;
-        background-color: white;
-        padding: 2%;
-        position: absolute;
-        top: 4%;
-        
 
+}
+
+.sale-img__offer {
+    width: 35%;
+    border: solid black 2px;
+    background-color: white;
+    padding: 2%;
+    position: absolute;
+    top: 4%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+       transform: scale(0);
+       opacity: 0;
     }
-    .sale__img img{
-        width: 100%;
+    100%{
+transform: scale(1);
+opacity: 1;
     }
+}
+
+.sale__img img {
+    width: 100%;
+}
 
 .recommended {
     padding: 10px;
@@ -141,12 +164,12 @@ body {
     gap: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
-    
+
 
 }
 
 .topics__container p {
-    border:  solid green 2px;
+    border: solid green 2px;
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
@@ -154,36 +177,43 @@ body {
 
 
 }
-.topics__container p:hover{
+
+.topics__container p:hover {
     background-color: aquamarine;
     color: red;
-    
+
 }
-.popular{
+
+.popular {
     padding: 10px;
 }
-.popular__container{
+
+.popular__container {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
     flex-wrap: wrap;
 }
-.footer{
+
+.footer {
     padding: 30px;
     background-color: black;
     color: white;
     gap: 40px;
 }
-.footer__one{
+
+.footer__one {
     display: flex;
-    
+
 }
-.footer__two{
-    
-    
+
+.footer__two {
+
+
     display: flex;
     justify-content: space-between;
 }
+
 .footer__one p {
     margin: 20px;
 }
